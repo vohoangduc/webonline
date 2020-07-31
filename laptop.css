@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+section{
+
+    height: 200px;
+    background: #000;
+}
+video{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+h3{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 15%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-size: 3.4em;
+    letter-spacing: 0.2em;
+    font-family: sans-serif;
+}
+h3 span{
+    display: inline-block;
+    animation: animate 1s linear forwards;
+    opacity: 0;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
+h3 span:nth-child(1){
+    animation-delay: 1.5s;
+}
+h3 span:nth-child(2){
+    animation-delay: 2s;
+}
+h3 span:nth-child(3){
+    animation-delay: 2.25s;
+}
+h3 span:nth-child(4){
+    animation-delay: 2.5s;
+}
+h3 span:nth-child(5){
+    animation-delay: 3s;
+}
+h3 span:nth-child(6){
+    animation-delay: 3.25s;
+}
+h3 span:nth-child(7){
+    animation-delay: 3.5s;
+}
+h3 span:nth-child(8){
+    animation-delay: 3.75s;
+}
+h3 span:nth-child(9){
+    animation-delay: 4s;
+}
+.noidung{
+    position: absolute;
+    top: 74%;
+    transform: translateY(-50%);
+}
+.row{
+   margin-left: 60px;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: white;
+    overflow: hidden;
+    margin-right: 3%;
+    margin-top: 15px;
+}
+input, .nut{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 8px;
+    right: 20px;
+    outline: none;
+    z-index: 10;
+}
+.hinh img{
+    width: 300px;
+    height: 230px;
+    margin-top: 10px;
+}
+input{
+    opacity: 0;
+}
+.nut{
+    pointer-events: none;
+    border-radius: 50%;
+    background: #ffeaa7;
+    transition: 0.5s;
+    text-align: center;
+    line-height: 50px;
+    font-size: 36px;
+    box-shadow: 0 0 0 0px #ffeaa7; 
+    z-index: 11;
+}
+input:checked ~ .nut{
+    box-shadow: 0 0 0 500px #ffeaa7;
+    transform: rotate(225deg);
+    background: #1abc9c;
+    
+}
+.hinh,.nd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.iphone{
+    background: greenyellow;
+    width: 120px;
+    border-radius: 10px;
+    position: relative;
+    top: -200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100px);
+    transition: 0.7s;
+    z-index: 10;
+}
+.card:hover .iphone{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+}
+.btn-success{
+    background: greenyellow!important;
+    border:none; color: red; 
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
+}
+.btn-success:hover{
+    background: white!important;
+    color: #000;
+}
+.buy{
+    border-radius: 10px;
+    position: relative;
+    top: -80%;
+    left: 40%;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100px);
+    transition: 0.7s;
+
+}
+.card:hover .buy{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+.card:hover .hinh img{
+    transform: translateY(-20px);
+}
+.card:hover .hinh .ip{
+    color: red;
+}
+.footer1{
+    margin: 50px auto;
+}
+.footer1 img{
+    width: 400px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: -20px;
+}
+.footer1 h4{
+    font-size: 30px;
+    margin-left: -5px;
+}
+.footer2{
+    margin: 50px auto;
+}
+.footer2 ul{
+    list-style: none;
+    margin-left: 50px;
+}
+.footer2 li{
+    cursor: pointer;
+}
+.footer2 h4{
+    font-size: 30px;
+    margin-left: 40px;
+}
+.footer3{
+    margin: 50px auto;
+}
+.footer3 li{
+    cursor: pointer;
+}
+.footer3 h4{
+    font-size: 30px;
+    margin-left: 20px;
+}
+.footer3 ul{
+    list-style: none;
+    margin-left: 20px;
+}
+.footer3 ul li{
+    font-size: 18px;
+    margin-top: 5px;
+}
+.footer3 ul li.id{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.footer3 ul li.id i{
+    font-size: 35px;
+    margin-right: 2%;
+}
+#lienhe{
+    background: #95a5a6;
+    margin-top: 3px;
+}
+.nd{
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 11;
+    pointer-events: none;
+    transition: 0.5s;
+    opacity: 0;
+}
+input:checked ~ .nd{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+
+
+

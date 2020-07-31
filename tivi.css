@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+section{
+
+    height: 200px;
+    background: #000;
+}
+video{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+h3{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 15%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-size: 3.4em;
+    letter-spacing: 0.2em;
+    font-family: sans-serif;
+}
+h3 span{
+    display: inline-block;
+    animation: animate 1s linear forwards;
+    opacity: 0;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
+h3 span:nth-child(1){
+    animation-delay: 1.5s;
+}
+h3 span:nth-child(2){
+    animation-delay: 2s;
+}
+h3 span:nth-child(3){
+    animation-delay: 2.25s;
+}
+h3 span:nth-child(4){
+    animation-delay: 2.5s;
+}
+h3 span:nth-child(5){
+    animation-delay: 3s;
+}
+h3 span:nth-child(6){
+    animation-delay: 3.25s;
+}
+h3 span:nth-child(7){
+    animation-delay: 3.5s;
+}
+h3 span:nth-child(8){
+    animation-delay: 3.75s;
+}
+h3 span:nth-child(9){
+    animation-delay: 4s;
+}
+.noidung{
+    position: absolute;
+    top: 74%;
+    transform: translateY(-50%);
+}
+.row{
+   margin-left: 60px;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: white;
+    overflow: hidden;
+    margin-right: 3%;
+    margin-top: 15px;
+}
+input, .nut{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    outline: none;
+    z-index: 10;
+}
+.hinh img{
+    width: 300px;
+    height: 200px;
+}
+.hinh img:hover{
+    transform: scale(1.1);
+}
+input{
+    opacity: 0;
+}
+.nut{
+    pointer-events: none;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.5s;
+    text-align: center;
+    line-height: 50px;
+    font-size: 36px;
+    box-shadow: 0 0 0 0px #ffeaa7;
+}
+input:checked ~ .nut{
+    box-shadow: 0 0 0 500px #ffeaa7;
+    transform: rotate(225deg);
+}
+.hinh,.nd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.footer1{
+    margin: 50px auto;
+}
+.footer1 img{
+    width: 400px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: -20px;
+}
+.footer1 h4{
+    font-size: 30px;
+    margin-left: -5px;
+}
+.footer2{
+    margin: 50px auto;
+}
+.footer2 ul{
+    list-style: none;
+    margin-left: 20px;
+}
+.footer2 li{
+    cursor: pointer;
+}
+.footer2 h4{
+    font-size: 30px;
+    margin-left: 20px;
+}
+.footer3{
+    margin: 50px auto;
+}
+.footer3 li{
+    cursor: pointer;
+}
+.footer3 h4{
+    font-size: 30px;
+    margin-left: 20px;
+}
+.footer3 ul{
+    list-style: none;
+    margin-left: 20px;
+}
+.footer3 ul li{
+    font-size: 18px;
+    margin-top: 5px;
+}
+.footer3 ul li.id{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.footer3 ul li.id i{
+    font-size: 35px;
+    margin-right: 2%;
+}
+#lienhe{
+    background: #95a5a6;
+    margin-top: 3px;
+}
+.nd{
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 11;
+    pointer-events: none;
+    transition: 0.5s;
+    opacity: 0;
+}
+input:checked ~ .nd{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
